@@ -124,8 +124,6 @@ def load_hospital_graph_from_csv() -> None:
             FROM 'file:///{dict_NODES['Visit']}' AS row
             MERGE (h:Visit {{id: toInteger(row.visit_id),
                                 patient_id: toInteger(row.patient_id),
-                                date_of_admission:date(row.date_of_admission),
-                                billing_amount:toFloat(row.billing_amount),
                                 room_number:toInteger(row.room_number),
                                 admission_type:row.admission_type,
                                 test_results:row.test_results,
@@ -150,20 +148,67 @@ def load_hospital_graph_from_csv() -> None:
             query = f"""
             LOAD CSV WITH HEADERS
             FROM 'file:///{dict_NODES['Visit']}' AS row
-            MATCH (from:Visit {{id:row.visit_id}})
-            MATCH (to:Hopital{{id:row.hospital_id}})
+            MATCH (from:Visit {{id:toInteger(row.visit_id)}})
+            MATCH (to:Hospital {{id:toInteger(row.hospital_id)}})
             MERGE (from)-[:AT]->(to)
             """
             _ = session.run(query, {})
 
-        LOGGER.info("Loading Hospital - EMPLOYS -> Hospital relationship")
+        LOGGER.info("Loading Hospital - EMPLOYS -> Physician relationship")
         with driver.session(database="hopitaldata") as session:
             query = f"""
             LOAD CSV WITH HEADERS
             FROM 'file:///{dict_NODES['Visit']}' AS row
-            MATCH (from:Hopital {{id:row.visit_id}})
-            MATCH (to:Hopital{{id:row.hospital_id}})
-            MERGE (from)-[:AT]->(to)
+            MATCH (from:Hospital {{id:toInteger(row.hospital_id)}})
+            MATCH (to:Physician{{id:toInteger(row.physician_id)}})
+            MERGE (from)-[:EMPLOYS]->(to)
+            """
+            _ = session.run(query, {})
+
+        LOGGER.info("Loading Physician - TREATS -> Visit relationship")
+        with driver.session(database="hopitaldata") as session:
+            query = f"""
+            LOAD CSV WITH HEADERS
+            FROM 'file:///{dict_NODES['Visit']}' AS row
+            MATCH (from:Physician {{id:toInteger(row.physician_id)}})
+            MATCH (to:Visit{{id:toInteger(row.visit_id)}})
+            MERGE (from)-[:TREATS]->(to)
+            """
+            _ = session.run(query, {})
+
+        LOGGER.info("Loading Patient - HAS -> Visit relationship")
+        with driver.session(database="hopitaldata") as session:
+            query = f"""
+            LOAD CSV WITH HEADERS
+            FROM 'file:///{dict_NODES['Visit']}' AS row
+            MATCH (from:Patient {{id:toInteger(row.patient_id)}})
+            MATCH (to:Visit{{id:toInteger(row.visit_id)}})
+            MERGE (from)-[:HAS]->(to)
+            """
+            _ = session.run(query, {})
+
+        LOGGER.info("Loading Visit - WRITES -> Review relationship")
+        with driver.session(database="hopitaldata") as session:
+            query = f"""
+            LOAD CSV WITH HEADERS
+            FROM 'file:///{dict_NODES['Review']}' AS row
+            MATCH (from:Visit {{id:toInteger(row.visit_id)}})
+            MATCH (to:Review{{id:toInteger(row.review_id)}})
+            MERGE (from)-[:WRITES]->(to)
+            """
+            _ = session.run(query, {})
+        
+        LOGGER.info("Loading Visit - COVERED_BY -> Payer relationship")
+        with driver.session(database="hopitaldata") as session:
+            query = f"""
+            LOAD CSV WITH HEADERS
+            FROM 'file:///{dict_NODES['Visit']}' AS row
+            MATCH (from:Visit {{id:toInteger(row.visit_id)}})
+            MATCH (to:Payer{{id:toInteger(row.payer_id)}})
+            MERGE (from)-[covered_by:COVERED_BY]->(to)
+            ON CREATE SET 
+                covered_by.date_of_admission=date(row.date_of_admission),
+                covered_by.billing_amount=toFloat(row.billing_amount)
             """
             _ = session.run(query, {})
 
