@@ -3,8 +3,6 @@ load_dotenv(override=True)
 
 from src.chains.hospital_review_chain import reviews_vector_chain
 
-
-
 query = """
         What have patients said about hospital efficiency?
         Mention details from specific reviews.
@@ -12,4 +10,4 @@ query = """
 
 response = reviews_vector_chain.invoke(query)
 
-response.get("result")
+print(response.get("result"))
