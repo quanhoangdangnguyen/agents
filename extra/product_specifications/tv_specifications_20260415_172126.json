@@ -1,0 +1,90 @@
+[
+    {
+        "brand": "Samsung",
+        "model_code": "MRA85R95HXKXXV",
+        "model_name": "85 Inch Micro RGB R95H 4K Samsung Vision AI Smart TV (2026)",
+        "year_released": 2026,
+        "hardware": {
+            "panel_technology": "Micro RGB",
+            "resolution": "3840x2160",
+            "native_refresh_rate_hz": 165,
+            "processor_chip": "Micro RGB AI Engine Pro",
+            "speaker_channels": null,
+            "audio_output_watts": null,
+            "total_hdmi_ports": null,
+            "hdmi_2_1_ports": null,
+            "usb_ports": null,
+            "ethernet_port": null,
+            "optical_audio_out": null,
+            "net_weight_kg": null,
+            "dimensions_no_stand_mm": null,
+            "vesa_mount_mm": null
+        },
+        "software": {
+            "smart_os": "Samsung Vision AI",
+            "os_version": null,
+            "hdr_formats": [
+                "Micro RGB HDR Pro"
+            ],
+            "audio_decoding": null,
+            "voice_assistants": [
+                "Samsung Vision AI Companion"
+            ],
+            "casting_protocols": null,
+            "smart_home_integration": null,
+            "ai_enhancements": [
+                "AI Engine Pro"
+            ],
+            "gaming_features": [
+                "Motion Xcelerator 165Hz"
+            ]
+        },
+        "source_urls": [
+            "https://www.samsung.com/vn/tvs/micro-rgb/r95h-85-inch-4k-smart-tv-mra85r95hxkxxv/"
+        ]
+    },
+    {
+        "brand": "Samsung",
+        "model_code": "MRA75R95HXKXXV",
+        "model_name": "75 Inch Micro RGB R95H 4K Samsung Vision AI Smart TV (2026)",
+        "year_released": 2026,
+        "hardware": {
+            "panel_technology": "Micro RGB",
+            "resolution": "3840x2160",
+            "native_refresh_rate_hz": 165,
+            "processor_chip": "Micro RGB AI Engine Pro",
+            "speaker_channels": null,
+            "audio_output_watts": null,
+            "total_hdmi_ports": null,
+            "hdmi_2_1_ports": null,
+            "usb_ports": null,
+            "ethernet_port": null,
+            "optical_audio_out": null,
+            "net_weight_kg": null,
+            "dimensions_no_stand_mm": null,
+            "vesa_mount_mm": null
+        },
+        "software": {
+            "smart_os": "Samsung Vision AI",
+            "os_version": null,
+            "hdr_formats": [
+                "Micro RGB HDR Pro"
+            ],
+            "audio_decoding": null,
+            "voice_assistants": [
+                "Samsung Vision AI Companion"
+            ],
+            "casting_protocols": null,
+            "smart_home_integration": null,
+            "ai_enhancements": [
+                "Micro RGB AI Engine Pro"
+            ],
+            "gaming_features": [
+                "Motion Xcelerator 165Hz"
+            ]
+        },
+        "source_urls": [
+            "https://www.samsung.com/vn/tvs/micro-rgb/r95h-75-inch-4k-smart-tv-mra75r95hxkxxv/"
+        ]
+    }
+]

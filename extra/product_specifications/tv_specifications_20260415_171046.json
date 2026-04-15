@@ -1,0 +1,126 @@
+[
+    {
+        "brand": "Samsung",
+        "model_code": "MRA85R95HXKXXV",
+        "model_name": "85 Inch Micro RGB R95H 4K Samsung Vision AI Smart TV (2026)",
+        "year_released": 2026,
+        "hardware": {
+            "panel_technology": "Micro RGB",
+            "resolution": "3840x2160",
+            "native_refresh_rate_hz": 165,
+            "processor_chip": "AI Engine Pro",
+            "speaker_channels": "4.2.2",
+            "audio_output_watts": null,
+            "total_hdmi_ports": null,
+            "hdmi_2_1_ports": null,
+            "usb_ports": null,
+            "ethernet_port": null,
+            "optical_audio_out": null,
+            "net_weight_kg": null,
+            "dimensions_no_stand_mm": {
+                "W": null,
+                "H": null,
+                "D": null
+            },
+            "vesa_mount_mm": null
+        },
+        "software": {
+            "smart_os": "Tizen",
+            "os_version": null,
+            "hdr_formats": [
+                "HDR10+"
+            ],
+            "audio_decoding": [
+                "Dolby Atmos"
+            ],
+            "voice_assistants": [
+                "Bixby",
+                "Google Assistant",
+                "Amazon Alexa"
+            ],
+            "casting_protocols": [
+                "Apple AirPlay 2",
+                "Chromecast built-in"
+            ],
+            "smart_home_integration": [
+                "SmartThings"
+            ],
+            "ai_enhancements": [
+                "AI Engine Pro",
+                "Adaptive Sound Pro",
+                "Active Voice Amplifier Pro"
+            ],
+            "gaming_features": [
+                "Motion Xcelerator 165Hz",
+                "FreeSync Premium Pro"
+            ]
+        },
+        "source_urls": [
+            "https://www.samsung.com/vn/tvs/micro-rgb/r95h-85-inch-4k-smart-tv-mra85r95hxkxxv/",
+            "https://www.samsung.com/us/tvs/micro-rgb/85-inch-micro-rgb-4k-tv-r95h-sku-mrn85r95hafxza",
+            "https://www.samsung.com/sg/tvs/micro-rgb/r95h-85-inch-micro-rgb-4k-smart-tv-mra85r95hakxxs/",
+            "https://www.samsung.com/in/support/model/MRA85R95HXUXXL/",
+            "https://dienmay247.com.vn/tu-khoa-san-pham/smart-tivi-samsung-micro-rgb-85-inch-mra85r95hxkxxv/",
+            "https://www.samsung.com/ca/tvs/micro-rgb/r95h-85-inch-4k-smart-tv-mrn85r95hafxzc/",
+            "https://www.samsung.com/sg/tvs/micro-rgb/r85h-85-inch-micro-rgb-4k-smart-tv-mra85r85hakxxs/",
+            "https://www.pcrichard.com/samsung-85-class-r95h-micro-rgb-4k-uhd-smart-tizen-tv/MRN85R95H.html"
+        ]
+    },
+    {
+        "brand": "Samsung",
+        "model_code": "MRA75R95HXKXXV",
+        "model_name": "75 Inch Micro RGB R95H 4K Samsung Vision AI Smart TV (2026)",
+        "year_released": 2026,
+        "hardware": {
+            "panel_technology": "Micro RGB",
+            "resolution": "3840x2160",
+            "native_refresh_rate_hz": 165,
+            "processor_chip": "Micro RGB AI Engine Pro",
+            "speaker_channels": "4.2.2",
+            "audio_output_watts": null,
+            "total_hdmi_ports": null,
+            "hdmi_2_1_ports": null,
+            "usb_ports": null,
+            "ethernet_port": null,
+            "optical_audio_out": null,
+            "net_weight_kg": null,
+            "dimensions_no_stand_mm": {
+                "W": 1651.2,
+                "H": 950.4,
+                "D": 30.5
+            },
+            "vesa_mount_mm": null
+        },
+        "software": {
+            "smart_os": "One UI Tizen",
+            "os_version": null,
+            "hdr_formats": [
+                "Micro RGB HDR Pro"
+            ],
+            "audio_decoding": [
+                "Dolby Atmos"
+            ],
+            "voice_assistants": [
+                "Samsung Vision AI Companion"
+            ],
+            "casting_protocols": [
+                "Apple AirPlay 2",
+                "Chromecast built-in"
+            ],
+            "smart_home_integration": [
+                "SmartThings"
+            ],
+            "ai_enhancements": [
+                "AI Engine Pro",
+                "Adaptive Sound Pro",
+                "Active Voice Amplifier Pro"
+            ],
+            "gaming_features": [
+                "Motion Xcelerator 165Hz"
+            ]
+        },
+        "source_urls": [
+            "https://www.samsung.com/vn/tvs/micro-rgb/r95h-75-inch-4k-smart-tv-mra75r95hxkxxv/"
+        ]
+    }
+]
