@@ -132,6 +132,8 @@ def load_hospital_graph_from_csv() -> None:
                                 hospital_id:toInteger(row.hospital_id),
                                 visit_status:row.visit_status
                                 }})
+            ON CREATE SET h.admission_date=date(row.date_of_admission)
+            ON MATCH SET h.admission_date=date(row.date_of_admission)
             ON CREATE SET h.discharge_date=date(row.discharge_date)
             ON MATCH SET h.discharge_date=date(row.discharge_date)
             ON CREATE SET h.chief_complaint=row.chief_complaint
