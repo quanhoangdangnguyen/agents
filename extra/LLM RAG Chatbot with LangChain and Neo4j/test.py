@@ -19,11 +19,18 @@ load_dotenv(override=True)
 
 # print(response)
 
-from src.tools.wait_times import get_current_wait_times,get_most_available_hospital
+# from src.tools.wait_times import get_current_wait_times,get_most_available_hospital
 
-print(get_current_wait_times("Wallace-Hamilton"))
+# print(get_current_wait_times("Wallace-Hamilton"))
 
-print(get_current_wait_times("fake hospital"))
+# print(get_current_wait_times("fake hospital"))
 
-print(get_most_available_hospital(None))
+# print(get_most_available_hospital(None))
 
+from src.agents.hospital_rag_agent import hospital_rag_agent_executor
+
+response = hospital_rag_agent_executor.invoke(
+            {"input":  "Query the graph database to show me reviews written by patient 7674"}
+            )
+
+print(response.get("output"))

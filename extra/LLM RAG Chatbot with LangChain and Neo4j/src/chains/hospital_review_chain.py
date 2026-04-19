@@ -23,7 +23,7 @@ neo4j_vector_index = Neo4jVector.from_existing_graph(
     text_node_properties=[
         "physician_name",
         "patient_name",
-        "text",
+        "review",
         "hospital_name",
     ],
     embedding_node_property="embedding",
