@@ -107,5 +107,3 @@ NOTICE_PARSER_CHAIN = (
     info_parse_prompt
     | notice_parser_model.with_structured_output(NoticeEmailExtract)
 )
-
-print(NOTICE_PARSER_CHAIN)
